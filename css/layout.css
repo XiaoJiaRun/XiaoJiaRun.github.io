@@ -1,0 +1,1189 @@
+/**
+ * Name: layout.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#General Layout 
+ *		#Header
+ *		#Content
+ *		#Footer
+ *	#Page Styles
+ *		#Nav
+ *		#Personal Profile
+ *		#Work Experience
+ *		#Education
+ *		#References
+ *		#Skills
+ *		#Portfolio
+ *		#Contact
+ *	#Responsive
+ *		#Large Display
+ *		#Smaller then 1024px width	
+ *		#Tablet (Portrait)
+ *		#Mobile (Portrait and Landscape )
+ *		#Mobile ( Landscape )
+ */
+
+/* ==========================================================================
+   #General Layout 
+   ========================================================================== */
+
+#wrap {
+    background-color: #fff;
+}
+
+/* Magnific Popup Buttons */
+
+.mfp-ajax-holder button.mfp-close {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    border: 1px solid #fff;
+    background-color: #252525;
+    color: #fff;
+    opacity: 1;
+}
+
+.mfp-ajax-holder .mfp-arrow {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    opacity: 1;
+}
+
+.mfp-ajax-holder .mfp-arrow-left {
+    left: 30px;
+    background: #252525 url(../images/prev.png) no-repeat center center;
+}
+
+.mfp-ajax-holder .mfp-arrow-right {
+    right: 50px;
+    background: #252525 url(../images/next.png) no-repeat center center;
+}
+
+.mfp-ajax-holder .mfp-arrow-left:before, .mfp-ajax-holder .mfp-arrow-right:before, .mfp-ajax-holder .mfp-arrow-left:after, .mfp-ajax-holder .mfp-arrow-right:after {
+    border: none;
+}
+
+/* Logo */
+
+#logo {
+    display: inline-block;
+    height: 85px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 28px 25px 0 25px;
+    background-color: #252525;
+    color: #fff;
+    font: 17px/18px 'Oswald', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: padding 0.3s;
+    -o-transition: padding 0.3s;
+    transition: padding 0.3s;
+}
+
+/*
+   .sticky-wrapper-scroll #logo { padding: 10px 25px; }
+   */
+
+/* Menu basics */
+
+.sf-menu, .sf-menu * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+.sf-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.sf-menu ul {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+.sf-menu>li {
+    float: left;
+}
+
+.sf-menu li:hover>ul, .sf-menu li.sfHover>ul {
+    display: block;
+}
+
+.sf-menu a {
+    display: block;
+    position: relative;
+}
+
+.sf-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Menu skin */
+
+.sf-menu {
+    float: right;
+}
+
+.sf-menu a {
+    padding: 10px 15px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+.sf-menu>li>a {
+    padding: 15px;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    line-height: 53px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*
+   .sticky-wrapper-scroll .sf-menu > li > a { 
+       padding: 9px 25px;
+       line-height: 35px;
+   }
+   */
+
+.sf-menu li {
+    -webkit-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover {
+    position: relative;
+    text-decoration: none;
+}
+
+.sf-menu li:hover a, .sf-menu li.sfHover a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sf-menu li a:hover {
+    color: #5f5f5f;
+}
+
+.sf-menu li.active a {
+    border-bottom-color: #252525;
+}
+
+/**
+     * 1. allow long menu items to determine submenu width
+     */
+
+.sf-menu ul {
+    min-width: 200px;
+    /* 1 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.sf-menu ul>li:last-child>a {
+    border-bottom: none;
+}
+
+/* Menu arrows */
+
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+/* Bottom facing arrows */
+
+.sf-arrows .sf-with-ul:after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.5);
+    margin-top: -13px;
+    content: "";
+}
+
+/* Right facing arrows */
+
+.sf-arrows ul .sf-with-ul:after {
+    margin-top: -5px;
+    margin-right: -3px;
+    border-color: transparent;
+    border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Menu  */
+
+#mobile-menu {
+    z-index: 20;
+    border-bottom: 1px solid #efefef;
+}
+
+#mobile-menu li {
+    display: block;
+    margin: 0;
+}
+
+#mobile-menu>li>ul, #mobile-menu>li>ul>li>ul {
+    display: none;
+    margin-left: 0;
+}
+
+#mobile-menu li a {
+    position: relative;
+    display: block;
+    padding: 15px 35px;
+    border-top: 1px solid #efefef;
+    color: #333;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#mobile-menu ul a {
+    padding-left: 45px;
+}
+
+#mobile-menu ul li ul a {
+    padding-left: 65px;
+}
+
+#mobile-menu .mobile-menu-submenu-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70px;
+    border-left: 1px solid #efefef;
+    color: #333;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#mobile-menu .mobile-menu-submenu-arrow:hover {
+    background-color: #f3f3f3;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+/* Mobile menu trigger  */
+
+#nav-mobile {
+    display: none;
+}
+
+#mobile-menu-trigger {
+    float: left;
+    display: none;
+    color: #252525;
+    font-size: 32px;
+}
+
+/* Search */
+
+#custom-search-form {
+    position: relative;
+}
+
+#custom-search-form #s {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+#custom-search-form #custom-search-submit {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    height: 18px;
+    width: 20px;
+    border: none;
+    background: url(../images/bg-search.png) no-repeat center center;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#custom-search-submit:focus {
+    outline: none;
+}
+
+/* #Content
+  ========================================================================== */
+
+#content {
+    position: relative;
+    min-height: 300px;
+}
+
+/* CV Sections */
+
+.cv-section {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 60px;
+}
+
+.cv-section:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* CV Sections Title */
+
+.cv-section-title {
+    padding: 15px 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.cv-section-title p {
+    margin-bottom: 5px;
+}
+
+.cv-section-title h1 {
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.cv-section-title h1:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    border-bottom: 1px solid #e1e1e1;
+    content: "";
+}
+
+.cv-section-title h1 span {
+    position: relative;
+}
+
+.cv-section-title h1 span small {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font: 12px 'PT Sans', sans-serif;
+}
+
+.cv-section-title h3 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* CV Item */
+
+.cv-item {
+    padding: 15px 0 5px 30px;
+    border-left: 1px solid #e1e1e1;
+    margin-top: -10px;
+}
+
+/* #Footer
+  ========================================================================== */
+
+#footer {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 40px 0;
+    background-color: rgba(31, 26, 27, 0.7);
+    color: #fff;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #f79453;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+#footer a:active {
+    color: #f67b29;
+    text-decoration-color: #f67b29;
+}
+
+/* ==========================================================================
+  #Page Styles
+  ========================================================================== */
+
+/* #Nav
+  ========================================================================== */
+
+#nav {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* lang-tabs */
+
+.lang-tabs {
+    color: #9A9A9A;
+    line-height: 85px;
+    float: right;
+    margin-right: 20px;
+    cursor: default;
+}
+
+.lang-tabs a {
+    color: #9A9A9A;
+}
+
+.lang-tabs a:hover {
+    color: #f79453;
+}
+
+.lang-tabs .lang-tab-current {
+    cursor: default;
+    pointer-events: none;
+    color: #252525;
+}
+
+.lang-tabs .lang-tab-current:hover {
+    color: #252525;
+}
+
+/*
+   .sticky-wrapper-scroll {
+       position: fixed;
+       z-index: 25;
+       top: 0;
+       right: 0;
+       left: 0;
+       background-color: #fff;
+   }
+   */
+
+@media (min-width: 1024px) {
+    .stuck {
+        position: fixed !important;
+        top: 0;
+        width: 100% !important;
+        z-index: 1000;
+    }
+    #nav.stuck {
+        background: #fff;
+    }
+    #nav.stuck .sf-menu>li>a {
+        padding: 9px 15px;
+        line-height: 45px;
+    }
+    #nav.stuck #logo {
+        height: 65px;
+        padding: 16px 24px;
+    }
+    #nav.stuck .lang-tabs {
+        line-height: 65px;
+    }
+}
+
+/* #Personal Profile
+  ========================================================================== */
+
+#personal-profile {
+    padding: 110px 0 80px 0;
+}
+
+.personal-details {
+    list-style: none;
+}
+
+.personal-details li {
+    padding: 9px 0;
+    border-bottom: 1px solid #e1e1e1;
+    color: #252525;
+}
+
+.personal-details li a {
+    color: #252525;
+}
+
+.personal-details li:first-child {
+    padding-top: 0;
+}
+
+.personal-details li:last-child {
+    border-bottom: none;
+}
+
+/* #Work Experience
+  ========================================================================== */
+
+#work-experience {
+    padding: 110px 0 80px 0;
+    background-color: #f6f6f6;
+}
+
+#work-experience .headline p span {
+    background-color: #f6f6f6;
+}
+
+/* #Education
+  ========================================================================== */
+
+#education {
+    padding: 110px 0 80px 0;
+    /* background-color: #f6f6f6;	 */
+}
+
+/* #education .headline p span { background-color: #f6f6f6; } */
+
+/* #Github
+  ========================================================================== */
+
+#github {
+    padding: 110px 0 80px 0;
+}
+
+/* #Skills
+  ========================================================================== */
+
+#skills {
+    padding: 110px 0 80px 0;
+}
+
+/* #References
+  ========================================================================== */
+
+#references {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#references.parallax {
+    margin-bottom: 0;
+}
+
+.references-slider {
+    margin-top: 50px;
+}
+
+#references .headline {
+    border-bottom: none;
+}
+
+#references .headline:before, #references .headline:after {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #fff;
+    width: 25px;
+    content: "";
+}
+
+#references .headline:before {
+    left: 0;
+}
+
+#references .headline:after {
+    right: 0;
+}
+
+#references .headline p {
+    top: auto;
+    bottom: -30px;
+    color: #fff;
+}
+
+#references .headline p span {
+    background-color: transparent;
+}
+
+/* #Skills
+  ========================================================================== */
+
+#skills {
+    padding: 110px 0 80px 0;
+    background-color: #f6f6f6;
+}
+
+#skills .headline p span {
+    background-color: #f6f6f6;
+}
+
+.interests-list {
+    list-style: none;
+}
+
+.interests-list li {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.interests-list li:last-child {
+    margin-right: 0;
+}
+
+.interests-list li>p {
+    margin-bottom: 0;
+}
+
+.interests-list li>p i {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #252525;
+    margin-bottom: 25px;
+    color: #252525;
+    font-size: 25px;
+    line-height: 70px;
+}
+
+.interest-details {
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: left;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.interests-list li:first-child .interest-details {
+    left: 0;
+}
+
+.interest-details i {
+    display: inline-block;
+    margin: 0 15px 20px 0;
+    font-size: 25px;
+    vertical-align: text-top;
+}
+
+.interest-details p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.interests-list li:hover .interest-details {
+    opacity: 1;
+}
+
+/* #Portfolio
+  ========================================================================== */
+
+#project-wrap {
+    max-width: 980px;
+    padding: 100px 0;
+    margin: 100px auto;
+    background-color: #fff;
+}
+
+#portfolio {
+    padding: 110px 0 80px 0;
+}
+
+#portfolio .headline {
+    margin-bottom: 40px;
+}
+
+/* Isotope */
+
+.portfolio-items {
+    margin: 65px 0;
+    list-style: none;
+}
+
+.portfolio-items li {
+    float: left;
+    width: 33.3333333333%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+/* Portfolio Item */
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.portfolio-items li .portfolio-item {
+    margin-bottom: 0;
+}
+
+.portfolio-item-preview {
+    position: relative;
+}
+
+.portfolio-item-preview>img {
+    display: block;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.portfolio-item-overlay-actions .portfolio-item-zoom, .portfolio-item-overlay-actions .portfolio-item-link {
+    position: absolute;
+    top: 28%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.portfolio-item-overlay-actions .portfolio-item-zoom {
+    left: 0;
+}
+
+.portfolio-item-overlay-actions .portfolio-item-link {
+    right: 0;
+}
+
+.portfolio-item-overlay-actions .portfolio-item-zoom:hover, .portfolio-item-overlay-actions .portfolio-item-link:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-item-description {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    left: 0;
+    padding: 25px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.portfolio-item-description h3 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.portfolio-item-description p {
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.portfolio-item:hover .portfolio-item-description {
+    opacity: 1;
+    bottom: 0;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-item-overlay-actions .portfolio-item-zoom {
+    left: 50%;
+    margin-left: -55px;
+}
+
+.portfolio-item:hover .portfolio-item-overlay-actions .portfolio-item-link {
+    right: 50%;
+    margin-right: -55px;
+}
+
+/* Portfolio Pagination */
+
+.pagination {
+    list-style: none;
+}
+
+.pagination li {
+    float: left;
+}
+
+.pagination a {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #e9e9e9;
+    border-left: none;
+}
+
+.pagination li:first-child a {
+    border-left: 1px solid #e9e9e9;
+}
+
+.pagination li.current a {
+    background-color: #f3f3f3;
+    color: #666;
+}
+
+.pagination li.current a:hover {
+    text-decoration: none;
+}
+
+/* Portfolio filter */
+
+.portfolio-filter ul {
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio-filter ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.portfolio-filter ul li:last-child {
+    margin-right: 0;
+}
+
+.portfolio-filter ul li a {
+    display: block;
+    padding: 5px 15px;
+    border: 1px solid #252525;
+    color: #252525;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.portfolio-filter ul li a:hover, .portfolio-filter ul li a.active {
+    background-color: #7a7a7a;
+    color: #fff;
+}
+
+/* #Contact
+  ========================================================================== */
+
+#contact {
+    padding-bottom: 110px;
+}
+
+#contact.parallax {
+    margin-bottom: 0;
+}
+
+#contact .headline {
+    margin-bottom: 80px;
+}
+
+/* Contact Info */
+
+.contact-info {
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.contact-info li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+}
+
+.contact-info li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info li a {
+    color: #fff;
+}
+
+.contact-info li i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    background-color: #252525;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* Contact Form */
+
+#contact-form {
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+label.validation-error {
+    color: #b55454;
+}
+
+input.validation-error, textarea.validation-error, select.validation-error {
+    border: 1px solid #a1a1a1;
+}
+
+#contact-form input[type="text"], #contact-form textarea {
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    resize: none;
+}
+
+#contact-form input[type="submit"] {
+    border: 1px solid #fff;
+    margin-top: 50px;
+    background-color: transparent;
+    color: #fff;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #252525;
+}
+
+/* ==========================================================================
+  #Responsive
+  ========================================================================== */
+
+/* #Large Display
+  ========================================================================== */
+
+@media (min-width: 1400px) {
+    .sf-menu>li>a {
+        padding: 15px 25px;
+    }
+    #nav.stuck .sf-menu>li>a {
+        padding: 9px 25px;
+    }
+    /* Portfolio */
+    /* #project-wrap {
+        max-width: 1300px;
+    } */
+}
+
+/* #Smaller then 1024px width
+  ========================================================================== */
+
+@media (max-width: 1024px) {
+    #wrap {}
+    #header {}
+    #content {}
+    #footer {}
+}
+
+/* #Tablet (Portrait)
+  ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1115px) {
+    #nav-pc {
+        display: none;
+    }
+    #nav-mobile {
+        display: block;
+    }
+    #mobile-menu-trigger {
+        display: block;
+        margin-top: 28px;
+    }
+    .cv-section-title h1 {
+        font-size: 32px;
+    }
+    /* Portfolio */
+    #project-wrap {
+        max-width: 100%;
+    }
+    .portfolio-items li {
+        width: 50%;
+    }
+    /* Skills */
+    .interests-list li {
+        margin: 15px 30px 15px 0;
+    }
+    /* References */
+    #references .headline:before, #references .headline:after {
+        width: 15px;
+    }
+}
+
+/* #Mobile (Portrait and Landscape )
+  ========================================================================== */
+
+@media (max-width: 767px) {
+    body {
+        background: none;
+        background-color: #fff;
+    }
+    .lang-tabs {
+        line-height: 65px;
+    }
+    #nav-pc {
+        display: none;
+    }
+    #nav-mobile {
+        display: block;
+    }
+    #mobile-menu-trigger {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        display: block;
+        padding: 10px;
+    }
+    #mobile-menu li a {
+        padding: 15px 40px;
+    }
+    .cv-item {
+        padding-left: 0;
+        border-left: none;
+    }
+    .cv-section-title {
+        text-align: left;
+    }
+    .cv-section-title h1:after {
+        left: 0;
+    }
+    .row {
+        padding: 0 40px;
+    }
+    .row .row {
+        width: auto;
+        padding: 0 20px;
+        margin: 0;
+    }
+    p.last, h1.last, h2.last, h3.last, h4.last, h5.last, address.last, ul.last, ol.last {
+        margin-bottom: 20px;
+    }
+    .text-right {
+        text-align: left;
+    }
+    /* Portfolio */
+    #project-wrap {
+        max-width: 100%;
+    }
+    .portfolio-items li {
+        float: none;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .portfolio-filter ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .portfolio-filter ul li:last-child {
+        margin-bottom: 0;
+    }
+    .portfolio-item-description p {
+        display: none;
+    }
+    /* References */
+    #references .headline {
+        margin-bottom: 50px;
+    }
+    /* Skills */
+    .interests-list li {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .interests-list li:last-child {
+        margin-bottom: 0;
+    }
+    .interests-list li>p {
+        display: none;
+    }
+    .interest-details {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid #252525;
+        margin: 15px 0;
+        background-color: transparent;
+        color: #252525;
+        opacity: 1;
+    }
+    /* Contact */
+    .social-media {
+        margin-bottom: 60px;
+    }
+    #contact-form {
+        margin-top: 0;
+    }
+}
+
+/* #Mobile ( Landscape )
+ ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .row {
+        padding: 0 40px;
+    }
+    #mobile-menu-trigger {
+        left: 30px;
+    }
+    /* Portfolio Items */
+    .portfolio-items li {
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+}
